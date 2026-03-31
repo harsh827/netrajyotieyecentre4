@@ -713,6 +713,9 @@ color:#ffffff;
 #work p {
 	color: #fff;
 }
+
+
+
 #portfolio {
 	width: 100%
 }
@@ -1248,7 +1251,7 @@ nav#filter li {
 
 .isotope-item {
 	margin: 0px;
-	padding: 0px;
+	padding: 10px;
 	box-sizing: border-box;
 	opacity: 1;
 }
@@ -1579,3 +1582,5 @@ display:none;
 #contactUs .email-protect{
 color: #efda3a !important;
 }
+
+
