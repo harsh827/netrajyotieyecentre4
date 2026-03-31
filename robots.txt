@@ -3,4 +3,4 @@ Disallow: /
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://netrajyotidhanbad3.harsh828207.workers.dev/sitemap.xml
+Sitemap: https://netrajyotieyecentre.org/sitemap.xml
