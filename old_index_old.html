@@ -542,34 +542,16 @@ eye care services for patients of all ages.
 </section>
 <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
 
-
-
 <script>
+
 const toggle = document.getElementById("navToggle");
 const menu = document.getElementById("navMenu");
 
-toggle.addEventListener("click", function(event) {
-    event.stopPropagation();
-    menu.classList.toggle("active");
-    toggle.classList.toggle("active");
+toggle.addEventListener("click", function(){
+menu.classList.toggle("active");
 });
 
-menu.addEventListener("click", function(event) {
-    event.stopPropagation();
-
-    if (event.target.tagName === "A") {
-        menu.classList.remove("active");
-        toggle.classList.remove("active");
-    }
-});
-
-document.addEventListener("click", function() {
-    menu.classList.remove("active");
-    toggle.classList.remove("active");
-});
 </script>
-
-
 
 
 <script type="application/ld+json">
