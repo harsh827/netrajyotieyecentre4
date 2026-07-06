@@ -1,7 +1,7 @@
 /* =========================================================
-   Netrajyoti Eye Centre - Cleaned custom stylesheet
-   Replace only: css/styles.css
-   Keep vendor files: bootstrap.min.css, isotope.css, animate.css, fancybox, Font Awesome.
+   Netrajyoti Eye Centre - Custom stylesheet
+   Updated: rounded square hamburger + smooth mobile dropdown
+   Replace your current css/styles.css with this file.
    ========================================================= */
 
 /* -------------------------
@@ -191,15 +191,19 @@ object {
   color: #f89f9f;
 }
 
-/* -------------------------
-   Custom navbar used in index.html
-------------------------- */
+/* =========================================================
+   PREMIUM NAVBAR + ROUNDED SQUARE HAMBURGER
+   Works with your existing HTML:
+   <div class="nav-toggle" id="navToggle"><span>...</span></div>
+   and existing JS that toggles .active on #navToggle and #navMenu.
+   ========================================================= */
 .custom-navbar {
   position: fixed;
   top: 0;
   z-index: 999;
   width: 100%;
-  background: #000;
+  background: rgba(0, 0, 0, 0.96);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 .nav-container {
@@ -229,6 +233,7 @@ object {
 }
 
 .nav-menu ul li a {
+  position: relative;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
@@ -236,30 +241,92 @@ object {
   transition: color 0.3s ease;
 }
 
+.nav-menu ul li a::after {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  content: '';
+  background: #ff2b2b;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
 .nav-menu ul li a:hover,
 .nav-menu ul li a:focus {
-  color: #ff0000;
+  color: #ff4d4d;
+}
+
+.nav-menu ul li a:hover::after,
+.nav-menu ul li a:focus::after {
+  width: 100%;
 }
 
 .nav-menu ul li a.active {
   color: #ffe206;
 }
 
+/* Rounded square hamburger */
 .nav-toggle {
   display: none;
-  flex-direction: column;
-  padding: 8px;
+  width: 54px;
+  height: 54px;
+  padding: 0;
   cursor: pointer;
-  border-radius: 4px;
-  background: #ff0000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(135deg, #ff1f1f, #a00000);
+  border-radius: 14px;
+  box-shadow:
+    0 8px 18px rgba(160, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 22px rgba(160, 0, 0, 0.45),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 .nav-toggle span {
   display: block;
-  width: 25px;
-  height: 5px;
-  margin: 4px 0;
+  height: 4px;
+  margin: 0;
   background: #fff;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.2s ease, width 0.3s ease;
+}
+
+.nav-toggle span:nth-child(1) {
+  width: 28px;
+}
+
+.nav-toggle span:nth-child(2) {
+  width: 28px;
+}
+
+.nav-toggle span:nth-child(3) {
+  width: 28px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  width: 28px;
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle.active span:nth-child(3) {
+  width: 28px;
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Legacy Bootstrap navbar support - kept in case custom.js references it */
@@ -1070,35 +1137,76 @@ footer input.form-control {
 @media (max-width: 768px) {
   .site-logo,
   .nav-logo img {
-    height: 40px;
+    height: 42px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-shrink: 0;
   }
 
   .nav-menu {
     position: absolute;
-    top: 70px;
-    left: 0;
-    display: none;
-    width: 100%;
-    background: #000;
+    top: 72px;
+    left: 12px;
+    right: 12px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.98), rgba(0, 0, 0, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.45),
+      0 0 0 1px rgba(255, 0, 0, 0.08);
+    transform: translateY(-12px) scale(0.97);
+    transform-origin: top right;
+    transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
   }
 
   .nav-menu.active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 
   .nav-menu ul {
     flex-direction: column;
     gap: 0;
-    padding: 20px 0;
-    text-align: center;
+    padding: 8px;
+    text-align: left;
   }
 
   .nav-menu ul li {
-    padding: 10px 0;
+    padding: 0;
   }
 
-  .nav-toggle {
-    display: flex;
+  .nav-menu ul li a {
+    display: block;
+    padding: 14px 16px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  }
+
+  .nav-menu ul li a::after {
+    display: none;
+  }
+
+  .nav-menu ul li a:hover,
+  .nav-menu ul li a:focus {
+    color: #fff;
+    background: linear-gradient(135deg, #d60000, #8b0000);
+    transform: translateX(4px);
+  }
+
+  .nav-menu ul li a.active {
+    color: #ffe206;
+    background: rgba(255, 226, 6, 0.08);
   }
 
   .banner-container {
