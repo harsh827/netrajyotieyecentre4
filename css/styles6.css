@@ -29,19 +29,21 @@ body {
 }
   */
 
+
 body {
   margin: 0;
-  /* Added robust fallbacks for old Apple/Android devices */
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px; /* INCREASED from 14px for eye patients */
-  line-height: 1.6; /* Slightly tighter line height to fit small screens */
-  color: #333; 
+  
+  /* Adding !important forces these rules to win over Bootstrap */
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important; 
+  line-height: 1.6 !important; 
+  color: #333 !important; 
+  
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   -webkit-text-size-adjust: 100%;
 }
-
 
 
 
@@ -55,16 +57,19 @@ body {
   background: #a00000;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Replace your top heading code with this: */
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 700;
   line-height: 1.25;
 }
+
+
 
 p {
   color: #000;
@@ -72,7 +77,7 @@ p {
 }
 
 a {
-  color: #efda3a;
+  color: #000;
   text-decoration: none;
   text-shadow: none;
   transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
@@ -80,7 +85,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #f9e54f;
+  color: #fd04fd;
   text-decoration: none;
 }
 
@@ -563,7 +568,7 @@ object {
   width: 80px;
   height: 3px;
   margin: 10px auto 0;
-  background: #a00000;
+  background:  #f00;
 }
 
 /* -------------------------
@@ -653,13 +658,15 @@ object {
   color: #000;
 }
 
-#h2_in_services::after {
+/* Automatically adds the maroon line to Services, Gallery, Testimonials, and Contact Us */
+#h2_in_services::after,
+.heading h2::after {
   display: block;
   width: 80px;
   height: 3px;
-  margin: 10px auto;
+  margin: 15px auto 10px;
   content: '';
-  background: #f00;
+  background:  #f00; 
 }
 
 .service-subtitle {
@@ -833,8 +840,7 @@ nav#filter a {
 #contactUs h3,
 #contactUs h4,
 #contactUs p,
-#contactUs td,
-#contactUs a {
+#contactUs td {
   color: #000;
 }
 
@@ -861,14 +867,6 @@ nav#filter a {
   border: 0;
 }
 
-.btn-color1 {
-  display: inline-block;
-  padding: 8px 12px;
-  margin: 4px 4px 4px 0;
-  color: #fff !important;
-  background: #1100ff !important;
-  border-radius: 30px !important;
-}
 
 .map-container {
   width: 100%;
@@ -899,7 +897,11 @@ footer li {
   color: #fff;
 }
 
-footer h4 {
+footer a {
+  color: #efda3a;
+}
+
+footer h4 { 
   padding-bottom: 12px;
   font-size: 24px;
 }
