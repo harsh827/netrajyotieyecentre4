@@ -58,16 +58,6 @@ body {
 }
 
 /* Replace your top heading code with this: */
-body h1, 
-body h2, 
-body h3, 
-body h4, 
-body h5, 
-body h6 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.25;
-}
 
 
 
@@ -418,7 +408,6 @@ object {
 .page-section {
   width: 100%;
   height: auto;
-  padding: 35px 0;
 }
 
 .page-section h1 {
@@ -576,8 +565,8 @@ object {
 ------------------------- */
 #aboutUs,
 .about-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 5px;
+  padding-bottom: 20px;
   overflow: hidden;
   background: #a00000;
   color: #fff;
@@ -596,7 +585,7 @@ object {
   margin-bottom: 20px;
   color: #fff;
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .about-content p {
@@ -625,7 +614,7 @@ object {
 }
 
 .about-highlights div {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #ffd700;
   font-size: 16px;
   font-weight: 600;
@@ -650,7 +639,7 @@ object {
    Services
 ------------------------- */
 .services-section {
-  padding: 60px 0;
+  padding: 10px 0;
   background: #f9f9f9;
 }
 
@@ -658,7 +647,7 @@ object {
   color: #000;
 }
 
-/* Automatically adds the maroon line to Services, Gallery, Testimonials, and Contact Us */
+/* Automatically adds the red line to Services, Gallery, Testimonials, and Contact Us */
 #h2_in_services::after,
 .heading h2::after {
   display: block;
@@ -827,124 +816,8 @@ nav#filter a {
   border: 1px solid #a43e89;
 }
 
-/* -------------------------
-   Contact section
-------------------------- */
-#contactUs {
-  color: #000;
-  background: #fff !important;
-  border-top: 1px solid #eee;
-}
-
-#contactUs h2,
-#contactUs h3,
-#contactUs h4,
-#contactUs p,
-#contactUs td {
-  color: #000;
-}
-
-#contactUs .btn {
-  border-radius: 0 !important;
-}
-
-#contactUs .email-protect {
-  color: #efda3a !important;
-}
-
-.email-protect .hide {
-  display: none;
-}
-
-.hours-table {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.hours-table td {
-  padding: 6px 0;
-  font-size: 15px;
-  border: 0;
-}
 
 
-.map-container {
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 450px;
-  border: 0;
-}
-
-/* -------------------------
-   Footer / copyright
-------------------------- */
-footer {
-  padding: 45px 0;
-  color: #fff;
-  background: #2f2f2f;
-  border-top: 1px solid #2f2f2f;
-}
-
-footer h2,
-footer h4,
-footer p,
-footer li {
-  color: #fff;
-}
-
-footer a {
-  color: #efda3a;
-}
-
-footer h4 { 
-  padding-bottom: 12px;
-  font-size: 24px;
-}
-
-footer .col ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-footer .col ul li,
-footer .col p {
-  font-size: 14px;
-}
-
-footer .col.col-social-icons i {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  color: #efda3a;
-  font-size: 18px;
-  text-align: center;
-  border: 1px solid #efda3a;
-  border-radius: 0;
-}
-
-footer .col.col-social-icons i:hover {
-  color: #a43e89;
-}
-
-footer input.form-control {
-  padding: 18px 10px;
-}
-
-.copyright {
-  padding: 20px 0;
-  color: #fff;
-  background: #000;
-  border-top: 1px solid #1d1d1d;
-}
 
 /* -------------------------
    Legacy optional sections - harmless if unused
@@ -1276,9 +1149,7 @@ footer input.form-control {
     margin-top: 22%;
   }
 
-  .hero-text h1 {
-    line-height: 35px;
-  }
+ 
 
   .navbar {
     min-height: 69px;
@@ -1288,22 +1159,15 @@ footer input.form-control {
     display: none;
   }
 
-  .page-section {
-    padding: 0;
-  }
+
 
   .page-section h1 {
     font-size: 3em;
   }
 
-  .page-section h2 {
-    font-size: 2em;
-  }
 
-  .page-section p {
-    margin: 0 0 20px;
-    font-size: 1em;
-  }
+
+
 
   .navbar-inverse .navbar-nav > li > a {
     padding: 0 !important;
@@ -1358,6 +1222,76 @@ footer input.form-control {
     margin: 0 0 23px 5px;
   }
 }
+
+
+
+
+/* -------------------------
+   Contact section
+------------------------- */
+#contactUs {
+  color: #000;
+  background: #fff !important;
+  border-top: 1px solid #eee;
+  padding-bottom: 0;
+}
+
+#contactUs h2,
+#contactUs h3,
+#contactUs h4,
+#contactUs p,
+#contactUs td {
+  color: #000;
+}
+
+#contactUs h3 {
+  font-weight: 700;
+}
+
+#contactUs .btn {
+  border-radius: 0 !important;
+}
+
+#contactUs .email-protect {
+  color: #efda3a !important;
+}
+
+.email-protect .hide {
+  display: none;
+}
+
+.hours-table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.hours-table td {
+  padding: 6px 0;
+  font-size: 15px;
+  border: 0;
+}
+
+
+.map-container {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+
+
+
+
+
+
+
+
 
 /* =========================================
    BUTTON UPGRADES FOR MOBILE TAPPING (SIDE-BY-SIDE FIX)
@@ -1419,7 +1353,7 @@ footer .col ul li a {
    ========================================================= */
 .testimonials-section {
   background: #f5f2ed; /* Gentle, low-glare background */
-  padding: 60px 0;
+  padding: 10px 0;
   border-top: 1px solid #eaddd3;
 }
 
@@ -1460,3 +1394,78 @@ footer .col ul li a {
   letter-spacing: 0.5px; /* Anti-blur measure for low-resolution screens */
 }
 
+
+/* -------------------------
+   Footer / copyright
+------------------------- */
+footer {
+  padding: 10px 0;
+  color: #fff;
+  background: #2f2f2f;
+  border-top: 1px solid #2f2f2f;
+}
+
+footer h2,
+footer h4,
+footer p,
+footer li {
+  color: #fff;
+}
+
+footer a {
+  color: #efda3a;
+}
+
+footer h4 { 
+  padding-bottom: 12px;
+  font-size: 24px;
+}
+
+footer .col ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer .col ul li,
+footer .col p {
+  font-size: 14px;
+}
+
+footer .col.col-social-icons i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #efda3a;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #efda3a;
+  border-radius: 0;
+}
+
+footer .col.col-social-icons i:hover {
+  color: #a43e89;
+}
+
+footer input.form-control {
+  padding: 18px 10px;
+}
+
+.copyright {
+  padding: 20px 0;
+  color: #fff;
+  background: #000;
+  border-top: 1px solid #1d1d1d;
+}
+
+
+/* -------------------------
+   MAKING EVERY H2 except those in about us sections BOLD AND HIGH CONTRAST FOR READABILITY
+------------------------- */
+
+body h2 {
+  font-weight: 900;
+}
