@@ -24,7 +24,7 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  color: #666;
+  color: #333;
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -649,7 +649,7 @@ object {
 
 .service-subtitle {
   margin-bottom: 40px;
-  color: #666;
+  color: #333;
 }
 
 .services-grid {
@@ -683,7 +683,7 @@ object {
 }
 
 .service-card p {
-  color: #666;
+  color: #333;
   font-size: 14px;
 }
 
@@ -1395,3 +1395,51 @@ footer .col ul li a {
     display: inline-block;
     padding: 2px 0;
 }
+
+
+/* =========================================================
+   TESTIMONIALS SECTION 
+   ========================================================= */
+.testimonials-section {
+  background: #f5f2ed; /* Gentle, low-glare background */
+  padding: 60px 0;
+  border-top: 1px solid #eaddd3;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 25px 20px;
+  margin-bottom: 30px;
+  border-top: 4px solid #a00000; /* Medical red accent */
+  border-radius: 6px;
+  /* Basic box shadow supported on very old browsers */
+  box-shadow: 0 4px 10px #e0dcd5; 
+  text-align: left;
+}
+
+.testimonial-card .stars {
+  color: #ffb400; /* High contrast gold */
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.testimonial-card .quote {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #222; /* Near-black for excellent readability in sunlight */
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-card .patient-name {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #a00000; /* Matches your brand theme */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; /* Anti-blur measure for low-resolution screens */
+}
+
