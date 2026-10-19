@@ -703,6 +703,7 @@ object {
 ------------------------- */
 #work {
   background: #a00000;
+  padding-bottom: 20px;
 }
 
 #work h2 {
