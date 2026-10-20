@@ -122,6 +122,7 @@
 
 
 <div id="top"></div>
+<main id="main-content">
 <section id="home">
   <div class="banner-container"> <img src="images/main_images/Outside3.jpg" alt="banner" />
     <div class="container banner-content">
@@ -576,19 +577,30 @@ eye care services for patients of all ages.
 
   <div class="container-fluid">
     <div class="map-container">
+      <!-- OLD IFRAME (commented out)
       <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.9267289608697!2d86.4658376!3d23.8212044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bbdbc8375dbb%3A0x7f5ccf3ce8300280!2sNetrajyoti%20Eye%20Centre%20-%20Unit%202!5e0!3m2!1sen!2sin!4v1773748412530!5m2!1sen!2sin"
       style="border:0;" 
       allowfullscreen="" 
       loading="lazy">
       </iframe>
+    -->
+      <iframe 
+      title="Interactive Google Map showing the location of Netrajyoti Eye Centre in Dhanbad"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.9267289608697!2d86.4658376!3d23.8212044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bbdbc8375dbb%3A0x7f5ccf3ce8300280!2sNetrajyoti%20Eye%20Centre%20-%20Unit%202!5e0!3m2!1sen!2sin!4v1773748412530!5m2!1sen!2sin"
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+      </iframe>
+
+
     </div>
   </div>
 </section>
 
 
 
-
+</main>
 
 
 
@@ -628,34 +640,48 @@ eye care services for patients of all ages.
                 </div>
             </div>
           -->
+            <!-- OLD SOCIAL MEDIA FAVICON CODE REMOVED
             <div class="col-md-3">
             	<div class="col col-social-icons">
-                    <h4>Follow us</h4>
-                    <!-- <a href="https://maps.app.goo.gl/edJSqo6UVj1cQSoM8"><i class="fa fa-map-marker"></i></a>
-                    <a href="https://jsdl.in/DT-99JQL6DYL1B"><i class="fa fa-youtube-play"></i></a> -->
+                    <h2>Follow us</h2>
+                     <a href="https://maps.app.goo.gl/edJSqo6UVj1cQSoM8"><i class="fa fa-map-marker"></i></a>
+                    <a href="https://jsdl.in/DT-99JQL6DYL1B"><i class="fa fa-youtube-play"></i></a> 
                     <a href="https://maps.app.goo.gl/edJSqo6UVj1cQSoM8" target="_blank" rel="noopener noreferrer" aria-label="View on Google Maps"><i class="fa fa-map-marker"></i></a>
                     <a href="https://www.justdial.com/Dhanbad/Dr-K-P-Gupta-Netrajyoti-Eye-Centre-Opposite-To-Relief-Diagnostic-Centre-Saraidhela/9999PX326-X326-210508113516-I9E5_BZDET" target="_blank" rel="noopener noreferrer" aria-label="View on Just Dial"><i class="fa fa-youtube-play"></i></a>
-                    <!--
+                    
                     <a href="#"><i class="fa fa-flickr"></i></a>
                     <a href="#"><i class="fa fa-linkedin"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-skype"></i></a>
                     <a href="#"><i class="fa fa-pinterest"></i></a>
-                     -->
+                     
                 </div>
             </div>
-              <!-- latest news removed
-             <div class="col-md-3">
-             	<div class="col">
-                    <h4>Latest News</h4>
-                    <p>
-                    Lorem ipsum dolor labitur scsstie per sit amet, ea eum labitur scsstie percipitoleat.
-                    <br><br>
-                    <a href="#" class="btn">Get Mores!</a>
-                    </p>
-                </div>
-            </div>
-          -->
+            -->
+
+
+            <!-- REPLACE THIS BLOCK IN YOUR FOOTER -->
+              <div class="col-md-3">
+                  <div class="col col-social-icons">
+                      <h2>Follow us</h2>
+                      
+                      <!-- Google Maps -->
+                      <a href="https://maps.app.goo.gl/edJSqo6UVj1cQSoM8" target="_blank" rel="noopener noreferrer" aria-label="View on Google Maps">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      </a>
+                      
+                      <!-- JustDial -->
+                      <a href="https://www.justdial.com/Dhanbad/Dr-K-P-Gupta-Netrajyoti-Eye-Centre-Opposite-To-Relief-Diagnostic-Centre-Saraidhela/9999PX326-X326-210508113516-I9E5_BZDET" target="_blank" rel="noopener noreferrer" aria-label="View on Just Dial">
+                          <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                      </a>
+
+                      <!-- Instagram -->
+                      <a href="https://www.instagram.com/netrajyotieyecentre.org_/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+
+                  </div>
+              </div>
         </div>
          
     </div>
@@ -670,7 +696,10 @@ eye care services for patients of all ages.
     <!-- / .row --> 
   </div>
 </section>
-<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<a href="#top" class="topHome" aria-label="Scroll back to top of page" title="Scroll to Top">
+  <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+</a>
 
 
 

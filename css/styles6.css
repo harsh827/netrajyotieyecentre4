@@ -196,10 +196,7 @@ object {
   z-index: 5;
 }
 
-.topHome:hover,
-.topHome:focus {
-  color: #f89f9f;
-}
+
 
 /* =========================================================
    PREMIUM NAVBAR + ROUNDED SQUARE HAMBURGER
@@ -1306,12 +1303,12 @@ nav#filter a {
 
 a.btn-color1 {
     flex: 1; /* This forces BOTH buttons to take up exactly 50% of the space */
-    background-color: #007bff; /* Medical Blue */
+    background-color: #004a99; /* Medical Blue */
     color: white !important;
     padding: 12px 5px; /* Reduced side padding so they fit */
     border-radius: 50px; /* Pill shape */
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
     text-align: center;
@@ -1407,7 +1404,6 @@ footer {
 }
 
 footer h2,
-footer h4,
 footer p,
 footer li {
   color: #fff;
@@ -1417,10 +1413,7 @@ footer a {
   color: #efda3a;
 }
 
-footer h4 { 
-  padding-bottom: 12px;
-  font-size: 24px;
-}
+
 
 footer .col ul {
   padding: 0;
