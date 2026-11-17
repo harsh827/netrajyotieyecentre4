@@ -1393,6 +1393,127 @@ footer .col ul li a {
 }
 
 
+/* =========================================================
+   FAQ SECTION 
+   ========================================================= */
+
+/* Fallback for ancient browsers (like IE11) to not break the layout */
+details, summary {
+  display: block;
+}
+
+.faq-section {
+  /* IMPROVED BACKGROUND: Premium diagonal gradient */
+  background-color: #f9f9f9; /* Solid fallback for very old browsers */
+  background: linear-gradient(135deg, #f5f2ed 0%, #ffffff 100%);
+  padding: 50px 0 60px; /* Increased padding to show off the new background */
+  border-top: 1px solid #eaddd3; /* Soft divider line */
+}
+
+.faq-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Base style for the collapsed FAQ */
+.faq-item {
+  background: #ffffff; /* Clean white box to pop against the new background */
+  border: 1px solid #e5e5e5;
+  border-radius: 8px; /* Slightly softer, more modern corners */
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+/* Style when the FAQ is clicked and opened */
+.faq-item[open] {
+  border-left: 5px solid #a00000; /* Thicker red accent */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Deeper shadow when active */
+  background: #ffffff;
+  transform: translateY(-2px); /* Beautiful subtle lift effect */
+}
+
+/* The clickable question */
+.faq-question {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  padding: 20px 50px 20px 20px; /* Fixed right padding so text never touches the icon */
+  cursor: pointer;
+  list-style: none; /* Removes default browser triangle */
+  position: relative;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Remove default arrow for Chrome/Safari */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Hover effect */
+.faq-question:hover,
+.faq-question:focus {
+  background: #fafafa;
+  color: #a00000;
+  outline: none;
+}
+
+/* Custom + Icon */
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px; /* Slightly larger */
+  color: #a00000;
+  font-weight: 300; /* Thinner, more elegant plus sign */
+  transition: transform 0.3s ease; /* Added rotation animation */
+}
+
+/* Changes to a Minus (-) Icon when opened + adds rotation */
+.faq-item[open] .faq-question::after {
+  content: '−'; 
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+/* The answer text */
+.faq-answer {
+  padding: 0 20px 20px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  border-top: 1px dashed #eaddd3; /* Changed to a refined dashed line */
+  margin-top: 0px;
+  padding-top: 15px;
+  
+  /* Added text fade-in animation */
+  animation: faqFadeIn 0.4s ease-in-out;
+}
+
+.faq-answer p {
+  margin-bottom: 0;
+}
+
+/* Keyframes for the answer fade-in */
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
 /* -------------------------
    Footer / copyright
 ------------------------- */
